@@ -1,20 +1,15 @@
-pipeline {
-    agent any 
-    stages {
-        stage('Build') { 
-            steps {
-                // "Building"
-            }
+node {
+    def gii_arocha 
+        stage('Git Clone'){
+            git 'https://github.com/alecio-rocha/jenkins'
+
         }
         stage('Test') { 
-            steps {
-                // "Teste" 
-            }
+            'make test'
+            junit '**/target/reports/TEST-*.bin'
         }
-        stage('Deploy') { 
-            steps {
-                // "deploy"
-            }
-        }
-    }
+        stage('build') {
+            ' go get gopkg.in/ns1/ns1-go.v2'
+        } 
 }
+
