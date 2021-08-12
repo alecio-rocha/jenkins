@@ -1,5 +1,4 @@
 node {
-    def git_arocha
         def git_rocha
         stage('Git Clone'){
             git 'https://github.com/alecio-rocha/jenkins'
