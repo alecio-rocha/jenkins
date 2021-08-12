@@ -1,1 +1,0 @@
-NS1_APIKEY environment variable is not set, giving up
